@@ -96,6 +96,8 @@ app.use(helmet.noSniff())
 // Use `helmet.ieNoOpen()`
 app.use(helmet.ieNoOpen())
 
+console.log(`Hello there!!!`)
+
 
 /**  7) Ask browsers to access your site via HTTPS only - `helmet.hsts()` */
 
