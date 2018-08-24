@@ -30,7 +30,7 @@ const helmet = require('helmet')
 // people off. e.g. `helmet.hidePoweredBy({ setTo: 'PHP 4.2.0' })`
 
 // Use `helmet.hidePoweredBy()``
-
+helmet.hidePoweredBy({ setTo: 'C 1.0.0' })
 
 
 /** 3) Mitigate the risk of clickjacking - `helmet.frameguard()` */
