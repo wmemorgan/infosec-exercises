@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "node"
+
+branches:
+  only:
+    - gomix
+    - master
+
+script:
+  - npx sync-glitch-cli
+
+notifications:
+  email:
+    on_failure: always
