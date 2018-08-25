@@ -160,7 +160,7 @@ app.use(helmet.noCache())
 // so a website owner can have a granular control.
 // See http://www.html5rocks.com/en/tutorials/security/content-security-policy/ ,
 // https://www.keycdn.com/support/content-security-policy/ for more details.
-// Unfortunately CSP in unsupported by older browser.
+// Unfortunately CSP is not unsupported by older browser.
 //
 // By default, directives are wide open, so it's important to set the `defaultSrc`
 // directive (helmet supports both `defaultSrc` and `default-src` naming styles),
@@ -175,7 +175,12 @@ app.use(helmet.noCache())
 // in the `"'self'"` keyword, the single quotes are part of the keyword itself, 
 // so it needs to be enclosed in **double quotes** to be working.
 
-
+app.use(helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+    }
+  })
+)
 
 /** TIP: */ 
 
