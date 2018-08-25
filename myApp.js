@@ -113,12 +113,12 @@ app.use(helmet.ieNoOpen())
 // policy we will intercept and restore the header, after inspecting it for testing.
 
 var ninetyDaysInMilliseconds = 90*24*60*60*1000;
-app.use(helmet.hsts({maxAge: ninetyDaysInMilliseconds, force: true}))
-
 
 //**Note**:
 // Configuring HTTPS on a custom website requires the acquisition of a domain,
 // and a SSL/TSL Certificate.
+
+app.use(helmet.hsts({ maxAge: ninetyDaysInMilliseconds, force: true }))
 
 /** 8) Disable DNS Prefetching - `helmet.dnsPrefetchControl()` */
 
@@ -132,7 +132,7 @@ app.use(helmet.hsts({maxAge: ninetyDaysInMilliseconds, force: true}))
 // DNS prefetching, at the cost of a performance penalty.
 
 // Use `helmet.dnsPrefetchControl()`
-
+app.use(helmet.dnsPrefetchControl())
 
 
 /** 9) Disable Client-Side Caching - `helmet.noCache()` */
