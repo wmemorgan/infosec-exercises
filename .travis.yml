@@ -2,12 +2,16 @@ language: node_js
 node_js:
   - "node"
 
+cache:
+  directories:
+    - node_modules  
+
 branches:
   only:
     - gomix
     - master
 
-script:
+after_success:
   - npx sync-glitch-cli
 
 notifications:
