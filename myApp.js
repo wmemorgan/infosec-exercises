@@ -177,7 +177,7 @@ app.use(helmet.noCache())
 
 app.use(helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: ["'self'"],
+      'default-src': ["'self'"],
     }
   })
 )
