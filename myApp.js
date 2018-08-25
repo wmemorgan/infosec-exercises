@@ -96,7 +96,7 @@ app.use(helmet.noSniff())
 // Use `helmet.ieNoOpen()`
 app.use(helmet.ieNoOpen())
 
-console.log(`Let's see if it still works`)
+console.log(`Yes I can still hear you!`)
 
 /**  7) Ask browsers to access your site via HTTPS only - `helmet.hsts()` */
 
